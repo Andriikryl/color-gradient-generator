@@ -2,9 +2,11 @@
 import React from "react";
 import { Container } from "../container/Container";
 import style from "./style.module.css";
+import VisuallyHidden from "../visuallyhidden/VisuallyHidden";
 
 export default function Generator() {
   const [colors, setColors] = React.useState([
+    "#0077b6",
     "#FFD500",
     "#FF0040",
     "#FF0040",
@@ -16,7 +18,7 @@ export default function Generator() {
   const visibleColors = colors.slice(0, numOfVisibleColors);
 
   const colorStops = visibleColors.join(", ");
-  const backgroundImage = `linear-gradient(${colorStops})`;
+  const backgroundImage = `linear-gradient(90deg,${colorStops})`;
 
   function addColor() {
     if (numOfVisibleColors >= 5) {
@@ -34,7 +36,12 @@ export default function Generator() {
     setNumOfVisibleColors(numOfVisibleColors - 1);
   }
   return (
-    <section>
+    <section
+      className={style.generate}
+      style={{
+        backgroundImage,
+      }}
+    >
       <Container>
         <div className={style.wrapper}>
           <div
@@ -48,7 +55,9 @@ export default function Generator() {
           <div className={style.colors}>
             <p className={style.input__description}>Colors:</p>
             <div className={style.flex__group}>
-              <button onClick={addColor}>Add color</button>
+              <button onClick={addColor}>
+                +<VisuallyHidden>add color</VisuallyHidden>
+              </button>
               {visibleColors.map((color, index) => {
                 const colorId = `color-${index}`;
                 return (
@@ -69,7 +78,9 @@ export default function Generator() {
                   </div>
                 );
               })}
-              <button onClick={removeColor}>Remove color</button>
+              <button onClick={removeColor}>
+                -<VisuallyHidden>Remove color</VisuallyHidden>
+              </button>
             </div>
           </div>
         </div>
