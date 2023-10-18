@@ -4,9 +4,18 @@
 .gradient__preview{
     width: 300px;
     height: 500px;
+    border-radius: 10px;
+}
+
+.box{
+    background-color: #ffffff;
+    padding: 10px;
+    height: max-content;
+    border-radius: 20px;
 }
 
 .wrapper{
+    border-radius: 10px;
     padding-block: 100px;
     padding-inline: 50px;
     display: flex;
@@ -16,11 +25,114 @@
 }
 
 .colors{
-    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #1d2d44;
+    border: 1px solid #ffc000;
     padding: 20px;
 }
 
 .flex__group{
+    border-radius: 10px;
     display: flex;
     gap: 20px;
+}
+
+.input__description{
+    color: #ffffff;
+    margin-block-end: 10px;
+}
+
+.flex__group{
+    background-color: #ffe5ec;
+    padding: 20px;
+    display: flex;
+    align-items: end;
+    gap: 30px;
+    margin-block-end: 20px;
+}
+
+.add__button{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #a7c957;
+    color: #ffffff;
+    border: none;
+}
+
+.remove__button{
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #c1121f;
+    border: none;
+}
+
+.input__colorAdd{
+    width: 50px;
+    height: 50px;
+}
+
+.form__direaction{
+    background-color: #ffe5ec;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    margin-block-end: 10px;
+}
+
+.select{
+    font-size: 20px;
+    padding: 15px;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.legend{
+    font-size: 20px;
+    color: #03045e;
+}
+
+.visual__box{
+    background-color: hsla(46, 15%, 83%, 0.323);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
+    0 2px 2px rgba(0,0,0,0.15), 
+    0 4px 4px rgba(0,0,0,0.15), 
+    0 8px 8px rgba(0,0,0,0.15);
+}
+.angel__visual{
+    margin-block-end: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 300px;
+}
+
+.angel__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.active__angel{
+    background-color: #ffffff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+    0 2px 2px rgba(0,0,0,0.11), 
+    0 4px 4px rgba(0,0,0,0.11), 
+    0 8px 8px rgba(0,0,0,0.11), 
+    0 16px 16px rgba(0,0,0,0.11), 
+    0 32px 32px rgba(0,0,0,0.11);
+}
+
+.unactive__angel{
+    background-color: transparent;
+    box-shadow: none;
 }

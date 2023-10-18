@@ -3,8 +3,10 @@ import React from "react";
 import { Container } from "../container/Container";
 import style from "./style.module.css";
 import VisuallyHidden from "../visuallyhidden/VisuallyHidden";
+import clsx from "clsx";
 
 export default function Generator() {
+  const [selectedOption, setSelectedOption] = React.useState("to left");
   const [colors, setColors] = React.useState([
     "#0077b6",
     "#FFD500",
@@ -18,7 +20,7 @@ export default function Generator() {
   const visibleColors = colors.slice(0, numOfVisibleColors);
 
   const colorStops = visibleColors.join(", ");
-  const backgroundImage = `linear-gradient(90deg,${colorStops})`;
+  const backgroundImage = `linear-gradient(${selectedOption},${colorStops})`;
 
   function addColor() {
     if (numOfVisibleColors >= 5) {
@@ -44,27 +46,29 @@ export default function Generator() {
     >
       <Container>
         <div className={style.wrapper}>
-          <div
-            className={style.gradient__preview}
-            style={{
-              backgroundImage,
-            }}
-          />
-          <div className={style.add__buttonGroup}></div>
+          <div className={style.box}>
+            <div
+              className={style.gradient__preview}
+              style={{
+                backgroundImage,
+              }}
+            />
+          </div>
 
           <div className={style.colors}>
             <p className={style.input__description}>Colors:</p>
             <div className={style.flex__group}>
-              <button onClick={addColor}>
+              <button onClick={addColor} className={style.add__button}>
                 +<VisuallyHidden>add color</VisuallyHidden>
               </button>
               {visibleColors.map((color, index) => {
                 const colorId = `color-${index}`;
                 return (
                   <div key={colorId} className={style.color__wrapper}>
-                    <label htmlFor={colorId}>Color {index + 1}:</label>
+                    <label htmlFor={colorId}>Color{index + 1}:</label>
                     <div className={style.input__wrapper}>
                       <input
+                        className={style.input__colorAdd}
                         id={colorId}
                         type="color"
                         value={color}
@@ -78,9 +82,77 @@ export default function Generator() {
                   </div>
                 );
               })}
-              <button onClick={removeColor}>
+              <button onClick={removeColor} className={style.remove__button}>
                 -<VisuallyHidden>Remove color</VisuallyHidden>
               </button>
+            </div>
+            <div className={style.angel__wrapper}>
+              <form className={style.form__direaction}>
+                <fieldset>
+                  <legend className={style.legend}>Angel diraction</legend>
+                  <select
+                    className={style.select}
+                    value={selectedOption}
+                    onChange={(event) => {
+                      setSelectedOption(event.target.value);
+                    }}
+                  >
+                    <option value="to left">to left</option>
+                    <option value="to right">to right</option>
+                    <option value="to bottom right">to bottom right</option>
+                    <option value="to bottom">to bottom</option>
+                    <option value="to bottom left">to bottom left</option>
+                    <option value="to top right">to top right</option>
+                    <option value="to top">to top</option>
+                    <option value="to top left">to top left</option>
+                  </select>
+                </fieldset>
+              </form>
+              <div className={style.angel__visual}>
+                <div
+                  className={clsx(style.visual__box, {
+                    [style.active__angel]: selectedOption === "to top left",
+                  })}
+                ></div>
+                <div
+                  className={clsx(style.visual__box, {
+                    [style.active__angel]: selectedOption === "to top",
+                  })}
+                ></div>
+                <div
+                  className={clsx(style.visual__box, {
+                    [style.active__angel]: selectedOption === "to top right",
+                  })}
+                ></div>
+                <div
+                  className={clsx(style.visual__box, {
+                    [style.active__angel]: selectedOption === "to left",
+                  })}
+                ></div>
+                <div
+                  className={clsx(style.visual__box, style.unactive__angel)}
+                ></div>
+                <div
+                  className={clsx(style.visual__box, {
+                    [style.active__angel]: selectedOption === "to right",
+                  })}
+                ></div>
+                <div
+                  className={clsx(style.visual__box, {
+                    [style.active__angel]: selectedOption === "to bottom left",
+                  })}
+                ></div>
+                <div
+                  className={clsx(style.visual__box, {
+                    [style.active__angel]: selectedOption === "to bottom",
+                  })}
+                ></div>
+                <div
+                  className={clsx(style.visual__box, {
+                    [style.active__angel]: selectedOption === "to bottom right",
+                  })}
+                ></div>
+              </div>
             </div>
           </div>
         </div>
