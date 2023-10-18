@@ -1,6 +1,7 @@
 import { useId } from "react";
 import style from "./style.module.css";
 import clsx from "clsx";
+import VisuallyHidden from "../visuallyhidden/VisuallyHidden";
 interface InputProps {
   rangeLabel: string;
   numberLabel: string;
@@ -27,7 +28,7 @@ export function InputFrame({
     <form className={clsx(style.form, className)}>
       <div className={style.label__box}>
         <label className={style.label} htmlFor={rangeValumeId}>
-          {rangeLabel}
+          <VisuallyHidden>{rangeLabel}</VisuallyHidden>
         </label>
         <input
           className={style.input}
@@ -41,10 +42,10 @@ export function InputFrame({
       </div>
       <div className={style.label__box}>
         <label className={style.label} htmlFor={numberValumeId}>
-          {numberLabel}
+          <VisuallyHidden>{numberLabel}</VisuallyHidden>
         </label>
         <input
-          className={style.input}
+          className={clsx(style.input, style.input__number)}
           type="number"
           id={numberValumeId}
           value={value}

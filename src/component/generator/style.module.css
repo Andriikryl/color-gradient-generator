@@ -98,8 +98,8 @@
 
 .visual__box{
     background-color: hsla(46, 15%, 83%, 0.323);
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     aspect-ratio: 1/1;
     box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
@@ -113,7 +113,7 @@
     gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 300px;
+    max-width: 220px;
 }
 
 .angel__wrapper{
@@ -135,4 +135,33 @@
 .unactive__angel{
     background-color: transparent;
     box-shadow: none;
+}
+
+.range__box{
+    display: flex;
+}
+
+.range__visual{
+    background-color: #fefae0;
+    background-image: conic-gradient(#ffc2d1,var(--angle),transparent 0%);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 40px;
+    top: -10px;
+}
+
+.form__angel{
+    display: flex;
+}
+
+.deg{
+    color: #fefae0;
+    font-size: 15px;
+    position: relative;
+    left: -80px;
+    bottom: -30px;
 }

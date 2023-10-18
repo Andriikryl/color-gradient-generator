@@ -4,9 +4,11 @@ import { Container } from "../container/Container";
 import style from "./style.module.css";
 import VisuallyHidden from "../visuallyhidden/VisuallyHidden";
 import clsx from "clsx";
+import { InputFrame } from "../inputFrame/InputFrame";
 
 export default function Generator() {
-  const [selectedOption, setSelectedOption] = React.useState("to left");
+  const [generatorVolume, setGeneratorVolume] = React.useState(0);
+  const [selectedOption, setSelectedOption] = React.useState(" ");
   const [colors, setColors] = React.useState([
     "#0077b6",
     "#FFD500",
@@ -20,7 +22,28 @@ export default function Generator() {
   const visibleColors = colors.slice(0, numOfVisibleColors);
 
   const colorStops = visibleColors.join(", ");
-  const backgroundImage = `linear-gradient(${selectedOption},${colorStops})`;
+
+  React.useEffect(() => {
+    if (selectedOption === "to right") {
+      setGeneratorVolume(90);
+    } else if (selectedOption === "to bottom right") {
+      setGeneratorVolume(142);
+    } else if (selectedOption === "to bottom") {
+      setGeneratorVolume(180);
+    } else if (selectedOption === "to bottom left") {
+      setGeneratorVolume(218);
+    } else if (selectedOption === "to left") {
+      setGeneratorVolume(270);
+    } else if (selectedOption === "to top left") {
+      setGeneratorVolume(322);
+    } else if (selectedOption === "to top") {
+      setGeneratorVolume(0);
+    } else if (selectedOption === "to top right") {
+      setGeneratorVolume(38);
+    }
+  }, [selectedOption]);
+
+  const backgroundImage = `linear-gradient(${generatorVolume}deg,${colorStops})`;
 
   function addColor() {
     if (numOfVisibleColors >= 5) {
@@ -37,6 +60,7 @@ export default function Generator() {
     }
     setNumOfVisibleColors(numOfVisibleColors - 1);
   }
+
   return (
     <section
       className={style.generate}
@@ -152,6 +176,21 @@ export default function Generator() {
                     [style.active__angel]: selectedOption === "to bottom right",
                   })}
                 ></div>
+              </div>
+              <div
+                className={clsx(style.range__box)}
+                style={{ "--angle": `${generatorVolume}deg` }}
+              >
+                <div className={style.range__visual}></div>
+                <InputFrame
+                  className={style.form__angel}
+                  value={generatorVolume}
+                  set={setGeneratorVolume}
+                  min={0}
+                  max={360}
+                  rangeLabel="angel-range"
+                  numberLabel="angel-number"
+                ></InputFrame>
               </div>
             </div>
           </div>
