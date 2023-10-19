@@ -1,12 +1,16 @@
 .hero{
-    height: 100dvh;
+    padding-block: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .hero__title{
+    display: block;
     font-size: 30px;
     text-transform: uppercase;
     color: #ffffff;
+    background-color: hsl(222, 43%, 9%);
+    padding: 100px;
+    width: 100%;
 }

@@ -1,10 +1,42 @@
 .path{
     padding-block: 100px;
 }
+.visual__box{
+    background-color: hsla(45, 37%, 26%, 0.723);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
+    0 2px 2px rgba(0,0,0,0.15), 
+    0 4px 4px rgba(0,0,0,0.15), 
+    0 8px 8px rgba(0,0,0,0.15);
+}
+.angel__visual{
+    margin-block-end: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 220px;
+}
+.active__angel{
+    background-color: #ffffff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+    0 2px 2px rgba(0,0,0,0.11), 
+    0 4px 4px rgba(0,0,0,0.11), 
+    0 8px 8px rgba(0,0,0,0.11), 
+    0 16px 16px rgba(0,0,0,0.11), 
+    0 32px 32px rgba(0,0,0,0.11);
+}
 
+.unactive__angel{
+    background-color: transparent;
+    box-shadow: none;
+}
 .path__title{
     font-size: 30px;
-    color: #C8D5BB;
+    color: hsl(222, 43%, 9%);
     font-family: IBM Plex Mono;
     font-style: normal;
     font-weight: 400;

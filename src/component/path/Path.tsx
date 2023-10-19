@@ -2,6 +2,7 @@
 import React from "react";
 import { Container } from "../container/Container";
 import style from "./style.module.css";
+import clsx from "clsx";
 
 export default function Path() {
   const [selectedOption, setSelectedOption] = React.useState("to left");
@@ -37,6 +38,51 @@ export default function Path() {
                 </select>
               </fieldset>
             </form>
+            <div className={style.angel__visual}>
+              <div
+                className={clsx(style.visual__box, {
+                  [style.active__angel]: selectedOption === "to top left",
+                })}
+              ></div>
+              <div
+                className={clsx(style.visual__box, {
+                  [style.active__angel]: selectedOption === "to top",
+                })}
+              ></div>
+              <div
+                className={clsx(style.visual__box, {
+                  [style.active__angel]: selectedOption === "to top right",
+                })}
+              ></div>
+              <div
+                className={clsx(style.visual__box, {
+                  [style.active__angel]: selectedOption === "to left",
+                })}
+              ></div>
+              <div
+                className={clsx(style.visual__box, style.unactive__angel)}
+              ></div>
+              <div
+                className={clsx(style.visual__box, {
+                  [style.active__angel]: selectedOption === "to right",
+                })}
+              ></div>
+              <div
+                className={clsx(style.visual__box, {
+                  [style.active__angel]: selectedOption === "to bottom left",
+                })}
+              ></div>
+              <div
+                className={clsx(style.visual__box, {
+                  [style.active__angel]: selectedOption === "to bottom",
+                })}
+              ></div>
+              <div
+                className={clsx(style.visual__box, {
+                  [style.active__angel]: selectedOption === "to bottom right",
+                })}
+              ></div>
+            </div>
             <div className={style.code__box}>
               <code className={style.code}>
                 <p>{backgroundStyle.background}</p>
