@@ -3,10 +3,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(180deg, #4587B3 0%, #ED7176 12.5%, #9EA3B5 26.56%, #D4B1AD 33.85%, #70A8A0 48.96%, #0F678D 100%);
 }
 
 .hero__title{
     font-size: 30px;
     text-transform: uppercase;
-    color: #1d3557;
+    color: #ffffff;
 }

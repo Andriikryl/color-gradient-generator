@@ -1,0 +1,139 @@
+.create{
+    padding-block: 100px;
+    background: linear-gradient(180deg, #47585C 0%, #C8D5BB 74.48%);
+}
+
+.create__title{
+    font-size: 30px;
+    color: #C8D5BB;
+    font-family: IBM Plex Mono;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-block-end: 20px;
+}
+
+.generate{
+    padding-block: 100px;
+}
+.gradient__preview{
+    width: 100%;
+    height: 300px;
+}
+
+
+.wrapper{
+    padding-block: 100px;
+    padding-inline: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background: #47585C;
+    backdrop-filter: blur(10px);
+}
+
+.colors{
+    background: #C8D5BB;
+    padding: 20px;
+}
+
+.flex__group{
+    display: flex;
+    gap: 20px;
+}
+
+.input__description{
+    color: #48595D;
+    font-family: IBM Plex Mono;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-block-end: 10px;
+}
+
+.flex__group{
+    padding: 20px;
+    display: flex;
+    align-items: end;
+    gap: 30px;
+    margin-block-end: 20px;
+}
+
+.add__button{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #a7c957;
+    color: #ffffff;
+    border: none;
+}
+
+.remove__button{
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #c1121f;
+    border: none;
+}
+
+.input__colorAdd{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.form__direaction{
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    margin-block-end: 10px;
+}
+
+.select{
+    font-size: 20px;
+    padding: 15px;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.legend{
+    font-size: 20px;
+    color: #03045e;
+}
+
+.color__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label{
+    color: #48595D;
+    font-family: IBM Plex Mono;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-block-end: 10px;
+}
+
+.code__box{
+    padding: 20px;
+    background: #C8D5BB;
+}
+
+.code{
+    color: #48595D;
+    font-family: IBM Plex Mono;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
