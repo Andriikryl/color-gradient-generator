@@ -14,9 +14,9 @@ export default function Generator() {
     "#0077b6",
     "#FFD500",
     "#FF0040",
-    "#FF0040",
-    "#FF0040",
-    "#FF0040",
+    "#8338ec",
+    "#00b4d8",
+    "#99582a",
   ]);
   const [numOfVisibleColors, setNumOfVisibleColors] = React.useState(2);
 
