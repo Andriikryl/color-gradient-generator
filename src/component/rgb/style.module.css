@@ -16,6 +16,7 @@
     justify-content: space-around;
     background-color: #ffffff;
     padding: 20px;
+    margin-block-end: 20px;
 }
 
 .flex__group{
@@ -116,3 +117,4 @@
   .box{
     width: max-content;
   }
+

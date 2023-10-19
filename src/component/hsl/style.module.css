@@ -1,0 +1,107 @@
+.hsl{
+    padding-block: 100px;
+}
+
+.hsl__title{
+    background-color: #a2d2ff;
+    padding: 20px;
+    font-size: 30px;
+    color: #ffafcc;
+    text-transform: uppercase;
+    margin-block-end: 20px;
+}
+
+.SliderRoot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    touch-action: none;
+    width: 250px;
+    height: 50px;
+  }
+  
+  .SliderTrack {
+    width: 250px;
+    height: 50px;
+    background-color: #ffffff;
+    position: relative;
+  }
+
+
+  .SliderThumb{
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 60px;
+    background-color: transparent;
+    border: 4px solid #ffffff;
+    outline: 2px solid black;
+    cursor: grab;
+  }
+
+  .description__block{
+    display: flex;
+    justify-content: space-between;
+  }
+  .color__box{
+    width: max-content;
+    margin-block-end: 20px;
+  }
+
+  .hsl__desc{
+    color: #e63946;
+    text-transform: uppercase;
+    margin-block-end: 10px;
+    display: block; 
+}
+
+.hsl__box{
+    width: 300px;
+    height: 300px;
+}
+
+.flex__group{
+    padding: 20px;
+    margin-block-end: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #f2cc8f;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list__item{
+    padding-block-end: 10px;
+    font-size: 20px;
+    color: #ede7e3;
+    border-bottom: 3px solid #ffc300;
+}
+
+.list__item span:nth-child(1){
+    background-color: #e63946;
+    padding: 10px;
+}
+
+.bg__box{
+    width: max-content;
+}
+
+.bg__box span{
+    background-color: #14213d;
+    color: #fca311;
+    font-size: 20px;
+    padding: 20px;
+    display: block;
+    text-align: center;
+}
+
+.description__list{
+    padding: 20px;
+    background-color: #e0aaff;
+}

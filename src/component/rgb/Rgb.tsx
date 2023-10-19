@@ -4,6 +4,7 @@ import { Container } from "../container/Container";
 import * as Slider from "@radix-ui/react-slider";
 import style from "./style.module.css";
 import clsx from "clsx";
+import DescriptionBlock from "../descriptionBlock/DescriptionBlock";
 export default function Rgb() {
   const [generatorVolumeRed, setGeneratorVolumeRed] = React.useState(0);
   const [generatorVolumeGreen, setGeneratorVolumeGreen] = React.useState(0);
@@ -106,6 +107,11 @@ export default function Rgb() {
             </span>
           </div>
         </div>
+        <DescriptionBlock>
+          Each value — red, green, blue — is referred to as a channel. Each
+          channel goes from 0 to 255. By mixing these channels in different
+          amounts, we can create over 16 milion different colors.
+        </DescriptionBlock>
       </Container>
     </section>
   );
