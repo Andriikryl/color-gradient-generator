@@ -1,0 +1,118 @@
+.rgb{
+    padding-block: 100px;
+}
+
+.rgb__title{
+    padding: 20px;
+    font-size: 25px;
+    text-transform: uppercase;
+    background-color: #1d3557;
+    color: #e63946;
+    margin-block-end: 20px;
+}
+
+.rgb__box{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.flex__group{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.red__box{
+    width: 250px;
+    height: 50px;
+    background: linear-gradient(90deg, rgb(0 0 0), rgb(28.333333333333332 0 0), rgb(56.666666666666664 0 0), rgb(85 0 0), rgb(113.33333333333333 0 0), rgb(141.66666666666669 0 0), rgb(170 0 0), rgb(198.33333333333334 0 0), rgb(226.66666666666666 0 0), rgb(255 0 0));
+    position: relative;
+}
+.red{
+    color: #e63946;
+    text-transform: uppercase;
+    margin-block-end: 10px;
+    display: block; 
+}
+
+.track__green{
+    background: linear-gradient(90deg, rgb(0 0 0), rgb(0 28.333333333333332 0), rgb(0 56.666666666666664 0), rgb(0 85 0), rgb(0 113.33333333333333 0), rgb(0 141.66666666666669 0), rgb(0 170 0), rgb(0 198.33333333333334 0), rgb(0 226.66666666666666 0), rgb(0 255 0)) !important;
+}
+
+.green{
+    color: rgb(0 85 0);
+    text-transform: uppercase;
+    margin-block-end: 10px;
+    display: block; 
+}
+
+
+.track__blue{
+    background: linear-gradient(90deg, rgb(0 0 0), rgb(0 0 28.333333333333332), rgb(0 0 56.666666666666664), rgb(0 0 85), rgb(0 0 113.33333333333333), rgb(0 0 141.66666666666669), rgb(0 0 170), rgb(0 0 198.33333333333334), rgb(0 0 226.66666666666666), rgb(0 0 255)) !important;
+}
+
+.blue{
+    color: rgb(0 0 85);
+    text-transform: uppercase;
+    margin-block-end: 10px;
+    display: block; 
+}
+
+
+.SliderRoot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    touch-action: none;
+    width: 250px;
+    height: 50px;
+  }
+  
+  .SliderTrack {
+    width: 250px;
+    height: 50px;
+    background: linear-gradient(90deg, rgb(0 0 0), rgb(28.333333333333332 0 0), rgb(56.666666666666664 0 0), rgb(85 0 0), rgb(113.33333333333333 0 0), rgb(141.66666666666669 0 0), rgb(170 0 0), rgb(198.33333333333334 0 0), rgb(226.66666666666666 0 0), rgb(255 0 0));
+    position: relative;
+  }
+
+
+  .SliderThumb{
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 60px;
+    background-color: transparent;
+    border: 4px solid #ffffff;
+    outline: 2px solid black;
+    cursor: grab;
+  }
+
+  .color__box{
+    width: max-content;
+  }
+
+  .description__block{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rgb__colorBox{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+  }
+  .color__value{
+    display: block;
+    color: #ffb703;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #023047;
+  }
+
+  .box{
+    width: max-content;
+  }
