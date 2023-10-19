@@ -1,0 +1,74 @@
+.path{
+    padding-block: 100px;
+}
+
+.path__title{
+    font-size: 30px;
+    color: #C8D5BB;
+    font-family: IBM Plex Mono;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-block-end: 20px;
+}
+
+.path__subT{
+    display: block;
+    font-size: 20px;
+    color: #71a63c;
+    font-family: IBM Plex Mono;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-block-end: 20px;
+    padding-block-end: 10px;
+    border-bottom: 3px solid #ffc300;
+}
+
+.gradient__box{
+    width: 300px;
+    flex-shrink: 0;
+    height: 500px;
+}
+
+.form__direaction{
+    background-color: #ffe5ec;
+    padding: 20px;
+    width: 100%;
+    margin-block-end: 10px;
+    align-self: flex-start;
+}
+
+.select{
+    font-size: 20px;
+    padding: 15px;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.legend{
+    font-size: 20px;
+    color: #03045e;
+}
+
+.flex__group{
+    display: flex;
+    gap: 40px;
+}
+
+.code__box{
+    padding: 20px;
+    background-color: #bde0fe;
+}
+
+.code{
+    font-size: 20px;
+    color: hsl(90, 24%, 8%);
+    font-family: IBM Plex Mono;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-block-end: 20px;
+}

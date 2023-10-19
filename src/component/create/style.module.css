@@ -1,6 +1,5 @@
 .create{
     padding-block: 100px;
-    background: linear-gradient(180deg, #47585C 0%, #C8D5BB 74.48%);
 }
 
 .create__title{
@@ -19,7 +18,7 @@
 }
 .gradient__preview{
     width: 100%;
-    height: 300px;
+    height: 200px;
 }
 
 

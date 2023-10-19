@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+main{
+  background: linear-gradient(180deg, #16160E 52.6%, #6C848D 100%);
+}
+
 /* Prevent font size inflation */
 html {
   -moz-text-size-adjust: none;
