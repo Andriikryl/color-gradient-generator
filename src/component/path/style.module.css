@@ -87,6 +87,7 @@
 
 .flex__group{
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
 }
 
