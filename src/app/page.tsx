@@ -12,13 +12,13 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Create />
-      <Path />
-      <Angel />
       <Rgb />
       <Hsl />
       <Lch />
       <CompereHl />
+      <Create />
+      <Path />
+      <Angel />
       <Resources />
     </>
   );
