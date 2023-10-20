@@ -5,6 +5,7 @@ import * as Slider from "@radix-ui/react-slider";
 import style from "./style.module.css";
 import clsx from "clsx";
 import DescriptionBlock from "../descriptionBlock/DescriptionBlock";
+import { AnimatedText } from "../animatedText/AnimatedText";
 export default function Rgb() {
   const [generatorVolumeRed, setGeneratorVolumeRed] = React.useState(0);
   const [generatorVolumeGreen, setGeneratorVolumeGreen] = React.useState(0);
