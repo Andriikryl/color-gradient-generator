@@ -1,0 +1,27 @@
+.resource{
+    padding-block: 100px;
+}
+
+.resoursec__title{
+    font-size: 40px;
+    color: #e63946;
+    border-left: 5px solid #ffb703;
+    padding-inline-start: 10px;
+}
+
+.list__item{
+    font-size: 20px;
+    border-bottom: 5px solid #ffb703;
+    padding-block-end: 10px;
+}
+
+.item__link{
+    color: #780000;
+    text-decoration: none;
+}
+
+.resource__list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

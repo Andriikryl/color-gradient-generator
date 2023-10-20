@@ -5,6 +5,7 @@ import Hero from "@/component/hero/Hero";
 import Hsl from "@/component/hsl/Hsl";
 import Lch from "@/component/lch/Lch";
 import Path from "@/component/path/Path";
+import Resources from "@/component/resoursec/Resources";
 import Rgb from "@/component/rgb/Rgb";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Hsl />
       <Lch />
       <CompereHl />
+      <Resources />
     </>
   );
 }
