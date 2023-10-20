@@ -1,6 +1,7 @@
 import Angel from "@/component/angel/Angel";
 import CompereHl from "@/component/compereHl/CompereHl";
 import Create from "@/component/create/Create";
+import Gamut from "@/component/gamut/Gamut";
 import Hero from "@/component/hero/Hero";
 import Hsl from "@/component/hsl/Hsl";
 import Lch from "@/component/lch/Lch";
@@ -19,6 +20,7 @@ export default function Home() {
       <Lch />
       <Toasty text="“Life is a painting, and you are the artist. You have on your palette all the colors in the spectrum - the same ones available to Michaelangelo and DaVinci.” – Paul J. Meyer" />
       <CompereHl />
+      <Gamut />
       <Create />
       <Toasty text="“It's basically the story of my life. Trying to paint the prettiest picture I can with the colors I have.” – Caleb Plant" />
       <Path />
