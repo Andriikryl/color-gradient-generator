@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "../container/Container";
 import style from "./style.module.css";
 import DescriptionBlock from "../descriptionBlock/DescriptionBlock";
+import TableCompere from "./tableCompere/TableCompere";
 export default function CompereHl() {
   return (
     <section>
@@ -68,6 +69,8 @@ export default function CompereHl() {
           have the same HSL lightness value, but they are clearly not equally
           light or dark when viewed by humans.
         </DescriptionBlock>
+        <h3 className={style.compere__title}>Lightness vs Luminance</h3>
+        <TableCompere />
       </Container>
     </section>
   );

@@ -1,0 +1,172 @@
+@layer demo {
+    .hsl .luminance > :nth-child(1) { background: hsl(0 0% 54%) }
+    .hsl .luminance > :nth-child(2) { background: hsl(30 0% 65%) }
+    .hsl .luminance > :nth-child(3) { background: hsl(60 0% 94%) }
+    .hsl .luminance > :nth-child(4) { background: hsl(90 0% 83%) }
+    .hsl .luminance > :nth-child(5) { background: hsl(120 0% 80%) }
+    .hsl .luminance > :nth-child(6) { background: hsl(150 0% 82%) }
+    .hsl .luminance > :nth-child(7) { background: hsl(180 0% 87%) }
+    .hsl .luminance > :nth-child(8) { background: hsl(210 0% 57%) }
+    .hsl .luminance > :nth-child(9) { background: hsl(240 0% 44%) }
+    .hsl .luminance > :nth-child(10) { background: hsl(270 0% 52%) }
+    .hsl .luminance > :nth-child(11) { background: hsl(300 0% 70%) }
+    .hsl .luminance > :nth-child(12) { background: hsl(330 0% 60%) }
+    
+    .hsl .colorful > :nth-child(1) { background: hsl(0 100% 50%) }
+    .hsl .colorful > :nth-child(2) { background: hsl(30 100% 50%) }
+    .hsl .colorful > :nth-child(3) { background: hsl(60 100% 50%) }
+    .hsl .colorful > :nth-child(4) { background: hsl(90 100% 50%) }
+    .hsl .colorful > :nth-child(5) { background: hsl(120 100% 50%) }
+    .hsl .colorful > :nth-child(6) { background: hsl(150 100% 50%) }
+    .hsl .colorful > :nth-child(7) { background: hsl(180 100% 50%) }
+    .hsl .colorful > :nth-child(8) { background: hsl(210 100% 50%) }
+    .hsl .colorful > :nth-child(9) { background: hsl(240 100% 50%) }
+    .hsl .colorful > :nth-child(10) { background: hsl(270 100% 50%) }
+    .hsl .colorful > :nth-child(11) { background: hsl(300 100% 50%) }
+    .hsl .colorful > :nth-child(12) { background: hsl(330 100% 50%) }
+    
+    .lch .luminance > :nth-child(1) { background: lch(50 0 30) }
+    .lch .luminance > :nth-child(2) { background: lch(50 0 60) }
+    .lch .luminance > :nth-child(3) { background: lch(50 0 90) }
+    .lch .luminance > :nth-child(4) { background: lch(50 0 120) }
+    .lch .luminance > :nth-child(5) { background: lch(50 0 150) }
+    .lch .luminance > :nth-child(6) { background: lch(50 0 180) }
+    .lch .luminance > :nth-child(7) { background: lch(50 0 210) }
+    .lch .luminance > :nth-child(8) { background: lch(50 0 240) }
+    .lch .luminance > :nth-child(9) { background: lch(50 0 270) }
+    .lch .luminance > :nth-child(10) { background: lch(50 0 300) }
+    .lch .luminance > :nth-child(11) { background: lch(50 0 330) }
+    .lch .luminance > :nth-child(12) { background: lch(50 0 0) }
+    
+    .lch .colorful > :nth-child(1) { background: lch(50 107 45) }
+    .lch .colorful > :nth-child(2) { background: lch(50 88 60) }
+    .lch .colorful > :nth-child(3) { background: lch(50 95 90) }
+    .lch .colorful > :nth-child(4) { background: lch(50 104 120) }
+    .lch .colorful > :nth-child(5) { background: lch(50 113 150) }
+    .lch .colorful > :nth-child(6) { background: lch(50 86 180) }
+    .lch .colorful > :nth-child(7) { background: lch(50 53 210) }
+    .lch .colorful > :nth-child(8) { background: lch(50 73 240) }
+    .lch .colorful > :nth-child(9) { background: lch(50 131 270) }
+    .lch .colorful > :nth-child(10) { background: lch(50 121 300) }
+    .lch .colorful > :nth-child(11) { background: lch(50 111 330) }
+    .lch .colorful > :nth-child(12) { background: lch(50 84 0) }
+  }
+  
+  @layer demo.support {
+    .body {
+      min-block-size: 100%;
+      font-family: system-ui, sans-serif;
+      display: grid;
+      place-content: center;
+      justify-items: center;
+      gap: 5ch;
+      padding-block: 5ch;
+    } 
+    
+     .main {
+        border: 4px solid #3a86ff;
+      max-inline-size: 100vw;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
+      place-items: center;
+    }
+
+    .hsl__title{
+        background-color: white;
+        font-size: 70px;
+        display: grid;
+        place-items: center;
+    }
+    .lch__title{
+        background-color: white;
+        font-size: 70px;
+        display: grid;
+        place-items: center;
+    }
+    .lch__title span{
+        display: block;
+    }
+    .hsl__title span{
+        display: block;
+    }
+    
+    .header {
+      display: grid;
+      gap: 2ch;
+      max-inline-size: 50ch;
+    } 
+    
+     .header > h1 {
+      text-align: center;
+    }
+    
+    .section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+      inline-size: 60vmin;
+      position: relative;
+    } 
+    
+     .section.lch {
+      text-align: end;
+    }
+ 
+    :is(.luminance, .colorful) {
+      display: grid;
+      grid-auto-rows: 3rem;
+      grid-template-columns: 1fr;
+    }
+    
+    :is(.luminance, .colorful) > * {
+      display: grid;
+      place-items: center;
+      color: black;
+    }
+    
+    .center__split {
+    padding: 20px;
+      display: flex;
+      justify-items: center;
+      gap: 2ch;
+      background-color: white;
+      border: 3px solid #ffc300;
+    }
+    
+    .center-split > p:first-of-type {
+      text-align: end;
+    }
+    
+    .center-split > p {
+      flex: 1;
+    }
+    
+    .footer {
+        border: 3px solid #ffc300;
+        padding: 20px;
+        background-color: white;
+      text-align: center;
+      display: grid;
+      gap: 1ch;
+    }
+  }
+  
+  .no__support {
+    max-inline-size: 35ch;
+    text-align: center;
+  }
+  
+  @supports (background: linear-gradient(in lch, black, white)) {
+    .no__support {
+      display: none
+    }
+  }
+  
+  @supports not (background: linear-gradient(in lch, black, white)) {
+    .no__support {
+      display: block;
+    }
+    .main, .footer, .header {
+      display: none
+    }
+  }

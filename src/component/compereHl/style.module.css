@@ -33,3 +33,10 @@
 .color__box:nth-child(4){
     background-color: hsl(250, 100%, 50%);
 }
+
+.compere__title{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 25px;
+}
