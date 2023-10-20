@@ -1,4 +1,5 @@
 import Angel from "@/component/angel/Angel";
+import CompereHl from "@/component/compereHl/CompereHl";
 import Create from "@/component/create/Create";
 import Hero from "@/component/hero/Hero";
 import Hsl from "@/component/hsl/Hsl";
@@ -16,6 +17,7 @@ export default function Home() {
       <Rgb />
       <Hsl />
       <Lch />
+      <CompereHl />
     </>
   );
 }
